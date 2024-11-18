@@ -98,18 +98,34 @@
       <div class="location" id="home">
         <h1 id="home">Malayalam Movies</h1>
         <div class="box">
-          <a href="#" onclick="openModal('https://vk.com/video_ext.php?oid=890913160&id=456239020&hash=c821d8bd057bde30')">
-            <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kishkindha-kaandam-et00410024-1726051976.jpg" alt="Movie 1">
+          <a href="#" onclick="openModal('https://vk.com/video_ext.php?oid=890913160&id=456239019&hash=de77464226eabf90')">
+            <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p1.PNG?raw=true" alt="Movie 1">
           </a>
-          <!--a href="#" onclick="openModal()">
-            <img src="#">
-          </a-->
+          <a href="#" onclick="openModal('https://vk.com/video_ext.php?oid=890913160&id=456239020&hash=anotherhash')">
+            <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p2.PNG?raw=true" alt="Movie 2">
+          </a>
           <!-- Add more links with respective video URLs -->
         </div>
       </div>
 
+      <!-- Other Sections -->
+      <h1 id="tvShows">English Flicks</h1>
+      <div class="box">
+        <a href="#" onclick="openModal('https://example.com/video1')">
+          <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv1.PNG?raw=true" alt="English Flick 1">
+        </a>
+        <a href="#" onclick="openModal('https://example.com/video2')">
+          <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv2.PNG?raw=true" alt="English Flick 2">
+        </a>
+      </div>
+
       <h1 id="movies">Tamil</h1>
       <div class="box">
+        <a href="#" onclick="openModal('https://example.com/tamil1')">
+          <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m1.PNG?raw=true" alt="Tamil Movie 1">
+        </a>
+        <a href="#" onclick="openModal('https://example.com/tamil2')">
+          <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m2.PNG?raw=true" alt="Tamil Movie 2">
         </a>
       </div>
     </section>
@@ -117,7 +133,10 @@
     <!-- Modal for video playback -->
     <div id="video-modal" class="modal">
       <button class="close-btn" onclick="closeModal()">×</button>
-      <iframe id="modal-iframe" allowfullscreen allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe id="modal-iframe" 
+              allowfullscreen="1" 
+              allow="autoplay; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
     </div>
 
     <!-- FOOTER -->
