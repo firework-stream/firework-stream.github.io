@@ -1,148 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firework</title>
-  <link rel="stylesheet" href="./style.css">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Firework
+  </title>
+  <link href="./style.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <title>
+   Firework
+  </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <script crossorigin="anonymous" defer="" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" src="https://use.fontawesome.com/releases/v5.1.0/js/all.js">
+  </script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    /* Modal styles */
-    .modal {
-      display: none; /* Hidden by default */
+   /* Include Plyr CSS */
+    @import url('https://cdn.plyr.io/3.7.0/plyr.css');
+    .video-player-wrapper {
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      z-index: 1000;
+      background: rgba(0, 0, 0, 0.9);
       justify-content: center;
       align-items: center;
+      z-index: 1000;
     }
-
-    .modal iframe {
+    .video-player {
       width: 80%;
-      height: 60%;
-      border: none;
+      height: 80%;
     }
-
-    .modal .close-btn {
+    .close-btn {
       position: absolute;
       top: 20px;
       right: 20px;
       color: white;
-      font-size: 30px;
       cursor: pointer;
-      background: transparent;
-      border: none;
-    }
-
-    /* Image hover effect */
-    .box a img {
-      max-width: 200px;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .box a img:hover {
-      transform: scale(1.05);
-    }
-
-    .wrapper {
-      max-width: 1200px;
-      margin: auto;
+      font-size: 24px;
     }
   </style>
-  <script>
-    // Function to open the modal and load the video
-    function openModal(videoUrl) {
-      const modal = document.getElementById('video-modal');
-      const iframe = document.getElementById('modal-iframe');
-
-      iframe.src = videoUrl;
-      modal.style.display = 'flex';
-    }
-
-    // Function to close the modal and stop the video
-    function closeModal() {
-      const modal = document.getElementById('video-modal');
-      const iframe = document.getElementById('modal-iframe');
-
-      iframe.src = '';
-      modal.style.display = 'none';
-    }
-  </script>
-</head>
-<body>
+ </head>
+ <body>
   <div class="wrapper">
-
-    <!-- HEADER -->
-    <header>
-      <div class="netflixLogo">
-        <a id="logo" href="#home"><img src="https://github.com/kryptfx/Firework/blob/main/img/logo-1.PNG?raw=true" alt="Logo Image"></a>
-      </div>
-      <nav class="main-nav">
-        <a href="#home">Home</a>
-        <a href="#tvShows">English</a>
-        <a href="#movies">Tamil</a>
-      </nav>
-    </header>
-
-    <!-- MAIN CONTAINER -->
-    <section class="main-container">
-      <!-- Malayalam Movies Section -->
-      <div class="location" id="home">
-        <h1 id="home">Malayalam Movies</h1>
-        <div class="box">
-          <a href="#" onclick="openModal('https://vk.com/video_ext.php?oid=890913160&id=456239019&hash=de77464226eabf90')">
-            <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p1.PNG?raw=true" alt="Movie 1">
-          </a>
-          <a href="#" onclick="openModal('https://vk.com/video_ext.php?oid=890913160&id=456239020&hash=anotherhash')">
-            <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p2.PNG?raw=true" alt="Movie 2">
-          </a>
-          <!-- Add more links with respective video URLs -->
-        </div>
-      </div>
-
-      <!-- Other Sections -->
-      <h1 id="tvShows">English Flicks</h1>
-      <div class="box">
-        <a href="#" onclick="openModal('https://example.com/video1')">
-          <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv1.PNG?raw=true" alt="English Flick 1">
-        </a>
-        <a href="#" onclick="openModal('https://example.com/video2')">
-          <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv2.PNG?raw=true" alt="English Flick 2">
-        </a>
-      </div>
-
-      <h1 id="movies">Tamil</h1>
-      <div class="box">
-        <a href="#" onclick="openModal('https://example.com/tamil1')">
-          <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m1.PNG?raw=true" alt="Tamil Movie 1">
-        </a>
-        <a href="#" onclick="openModal('https://example.com/tamil2')">
-          <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m2.PNG?raw=true" alt="Tamil Movie 2">
-        </a>
-      </div>
-    </section>
-
-    <!-- Modal for video playback -->
-    <div id="video-modal" class="modal">
-      <button class="close-btn" onclick="closeModal()">×</button>
-      <iframe id="modal-iframe" 
-              allowfullscreen="1" 
-              allow="autoplay; encrypted-media; fullscreen; picture-in-picture">
-      </iframe>
+   <!-- HEADER -->
+   <header>
+    <div class="netflixLogo">
+     <a href="#home" id="logo">
+      <img alt="Logo Image" src="https://github.com/kryptfx/Firework/blob/main/img/logo-1.PNG?raw=true"/>
+     </a>
     </div>
-
-    <!-- FOOTER -->
-    <footer>
-      <p>Firework.Inc</p>
-    </footer>
+    <nav class="main-nav">
+     <a href="#home">
+      Home
+     </a>
+     <a href="#tvShows">
+      English
+     </a>
+     <a href="#movies">
+      Tamil
+     </a>
+    </nav>
+   </header>
+   <!-- END OF HEADER -->
+   <!-- MAIN CONTAINER -->
+   <section class="main-container">
+    <div class="location" id="home">
+     <h1 id="home">
+      Malayalam Movies
+     </h1>
+     <div class="box" id="malayalam">
+      <a class="video-link" data-video-url="https://superior-dareen-firework-d62602f5.koyeb.app/stream/269?hash=2df928" href="#">
+       <img alt="" src="https://m.media-amazon.com/images/M/MV5BNjBkNDMzYzktZjBjMy00ZmU3LTk0MDEtNzAzNGFjMGE4MDQyXkEyXkFqcGc@._V1_.jpg"/>
+      </a>
+      <a class="" data-video-url="" href="https://drive.google.com/file/d/1tQ0_nWWWJ0JqiTrAZVcUCx7II_nKkt-b/preview">
+       <img alt="" src="img\Aavesham.jpg"/>
+      </a>
+     </div>
+    </div>
+    <h1 id="tvShows">
+     English Flicks
+    </h1>
+    <div class="box" id="eng">
+     <a class="video-link" data-video-url="https://superior-dareen-firework-d62602f5.koyeb.app/stream/91?hash=32be95" href="#">
+      <img alt="" src="img\Captain+America.jpg"/>
+     </a>
+    </div>
+    <h1 id="movies">
+     Tamil
+    </h1>
+    <div class="box" id="tamil">
+     <a class="video-link" data-video-url="https://superior-dareen-firework-d62602f5.koyeb.app/stream/103?hash=75b5cc" href="#">
+      <img alt="" src="img\Jailer.jpg"/>
+     </a>
+     <a class="video-link" data-video-url="https://superior-dareen-firework-d62602f5.koyeb.app/stream/241?hash=e9f74a" href="#">
+      <img alt="" src="img\Raghu+thatha.jpg"/>
+     </a>
+    </div>
+   </section>
+   <!-- END OF MAIN CONTAINER -->
+   <!-- FOOTER -->
+   <footer>
+    <p>
+     Firework.Inc
+    </p>
+   </footer>
   </div>
-</body>
+  <!-- Video Player Modal -->
+  <div class="video-player-wrapper" id="video-player-wrapper">
+   <span class="close-btn" id="close-btn">
+    &times;
+   </span>
+   <video autoplay="autoplay" class="video-player" controls="controls" id="player" loop="loop" src="#" tabindex="0" type="video/webm, video/mp4, video/x-m4v, video/*, .mkv, .mp3" width="100%">
+   </video>
+  </div>
+  <script src="https://cdn.plyr.io/3.7.0/plyr.js">
+  </script>
+  <script src="plyr.polyfilled.js">
+  </script>
+  <script>
+   const player = new Plyr('#player', {
+      controls: [
+        'play-large',
+        'rewind',
+        'play',
+        'fast-forward',
+        'progress',
+        'current-time',
+        'mute',
+        'volume',
+        'captions',
+        'settings',
+        'pip',
+        'fullscreen'
+      ]
+    });
+
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    function ctrlShiftKey(e, keyCode) {
+      return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+    }
+
+    document.onkeydown = (e) => {
+      // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+      if (e.keyCode === 123 || ctrlShiftKey(e, 'I') || ctrlShiftKey(e, 'J') || ctrlShiftKey(e, 'C') || (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))) {
+        return false;
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const videoLinks = document.querySelectorAll('.video-link');
+      const videoPlayerWrapper = document.getElementById('video-player-wrapper');
+      const closeBtn = document.getElementById('close-btn');
+      const videoPlayer = document.getElementById('player');
+
+      videoLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const videoUrl = link.getAttribute('data-video-url');
+          videoPlayer.src = videoUrl;
+          videoPlayerWrapper.style.display = 'flex';
+          player.play();
+        });
+      });
+
+      closeBtn.addEventListener('click', () => {
+        videoPlayerWrapper.style.display = 'none';
+        player.pause();
+      });
+    });
+  </script>
+ </body>
 </html>
